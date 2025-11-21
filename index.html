@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sleevd.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['"Space Mono"', 'monospace'],
+            },
+            colors: {
+              retro: {
+                bg: '#f4f4f0',
+                text: '#111111',
+                darkBg: '#121212',
+                darkText: '#e0e0e0',
+                dim: '#888888',
+                darkDim: '#666666',
+                accent: 'var(--accent)', // Dynamic Accent
+              }
+            },
+            boxShadow: {
+              'retro': '5px 5px 0px rgba(0,0,0,0.1)',
+              'retro-dark': '5px 5px 0px rgba(255,255,255,0.1)',
+            },
+            animation: {
+              'spin-slow': 'spin 3s linear infinite',
+              'twitch': 'twitch 0.3s linear infinite',
+            },
+            keyframes: {
+              twitch: {
+                '0%, 100%': { transform: 'translate(0, 0)' },
+                '25%': { transform: 'translate(1px, 0)' },
+                '75%': { transform: 'translate(-1px, 0)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      :root {
+        --accent: #ff4d00; /* Default Orange */
+      }
+
+      /* Vinyl Groove Texture */
+      .vinyl-texture {
+        background-image: repeating-radial-gradient(
+          #111 0, 
+          #111 4px, 
+          #222 5px, 
+          #111 6px
+        );
+      }
+      /* Hide scrollbar for clean UI */
+      body::-webkit-scrollbar {
+        width: 8px;
+      }
+      body::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      body::-webkit-scrollbar-thumb {
+        background-color: #888;
+        border-radius: 4px;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-retro-bg text-retro-text dark:bg-retro-darkBg dark:text-retro-darkText transition-colors duration-500 min-h-screen flex flex-col overflow-x-hidden">
+    <div id="root"></div>
+  </body>
+</html>
