@@ -182,6 +182,7 @@ const App: React.FC = () => {
                     setMode={setViewMode}
                     linerNotes={linerNotes}
                     isNotesLoading={isNotesLoading}
+                    accentColor={accentColor}
                   />
               </div>
             </>
