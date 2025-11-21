@@ -205,7 +205,7 @@ const App: React.FC = () => {
       </main>
 
       <footer className="p-4 text-center font-mono text-xs text-retro-dim dark:text-retro-darkDim border-t border-retro-text/10 dark:border-retro-darkText/10">
-            Sleevd. v2.8 • React • Gemini • iTunes
+            Sleevd. v2.8 • React • Gemini • iTunes • an <span className="italic">ellhuck</span> idea
       </footer>
     </div>
   );
